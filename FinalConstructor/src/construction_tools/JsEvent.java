@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package construction_tools.models;
+package construction_tools;
 
 /**
  *
  * @author RICARDO
  */
-public class HtmlComponent implements finalconstructor.Debug{
+public class JsEvent implements finalconstructor.Debug{
     
 }
