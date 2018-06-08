@@ -24,13 +24,10 @@ import finalconstructor.Debug;
 public class Core implements finalconstructor.Debug{
     
     
-    
-    
-    
 
 //GENERAL PROPIETIES____________________________________________________________
     
-
+    
 
 //SUB TRHEAD-CLASSES____________________________________________________________    
    
@@ -39,10 +36,7 @@ public class Core implements finalconstructor.Debug{
      */
     class HtmlConstruction 
             implements Runnable
-            //mplements finalconstructor.Debug
     {
-        //Debug.debugPrintln("");
-        
         @Override
         public void run() 
         {
