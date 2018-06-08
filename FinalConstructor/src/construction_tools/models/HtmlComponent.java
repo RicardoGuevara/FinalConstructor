@@ -19,6 +19,6 @@ package construction_tools.models;
  *
  * @author RICARDO
  */
-public class HtmlComponent {
+public class HtmlComponent implements finalconstructor.Debug{
     
 }

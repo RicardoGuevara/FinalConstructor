@@ -15,11 +15,13 @@
  */
 package construction_tools;
 
+import finalconstructor.Debug;
+
 /**
  *Simplifies all the documents creation and management
  * @author RICARDO
  */
-public class Core {
+public class Core implements finalconstructor.Debug{
     
     
     
@@ -35,9 +37,12 @@ public class Core {
     /**
      *Referent  
      */
-    class HtmlConstruction implements Runnable
+    class HtmlConstruction 
+            implements Runnable
+            //mplements finalconstructor.Debug
     {
-
+        //Debug.debugPrintln("");
+        
         @Override
         public void run() 
         {

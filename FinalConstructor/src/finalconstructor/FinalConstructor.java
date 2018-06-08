@@ -27,7 +27,7 @@ import javafx.stage.Stage;
  *
  * @author RICARDO
  */
-public class FinalConstructor extends Application {
+public class FinalConstructor extends Application implements Debug{
     
     @Override
     public void start(Stage primaryStage) {
@@ -55,6 +55,7 @@ public class FinalConstructor extends Application {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Debug.debugPrintln("START RUNNING ","IN HARD-DEBUG");
         launch(args);
     }
     
