@@ -45,12 +45,12 @@ public class GUILoader extends Application {
     private double yOffset = 0;
 
     public static Stage antlog = new Stage(),
-                        actlog;
+                        actlog = new Stage();
     
     @Override
     public void start(Stage primaryStage) throws Exception {
         primaryStage.initStyle(StageStyle.TRANSPARENT);
-        Parent root = FXMLLoader.load(getClass().getResource("/gui/" + fxml + ".fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/gui/fxmls/" + fxml + ".fxml"));
 
         root.setOnMousePressed(new EventHandler<MouseEvent>() {
             @Override

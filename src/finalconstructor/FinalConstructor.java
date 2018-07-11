@@ -15,6 +15,7 @@
  */
 package finalconstructor;
 
+import gui.GUILoader;
 import java.io.IOException;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -57,6 +58,8 @@ public class FinalConstructor extends Application implements Debug{
         primaryStage.setTitle("Hello World!");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+        
+        GUILoader.actlog = primaryStage;
     }
 
     /**

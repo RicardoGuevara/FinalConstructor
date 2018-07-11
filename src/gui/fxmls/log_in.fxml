@@ -12,7 +12,7 @@
    <children>
       <Pane id="log_data_pane" layoutX="450.0" opacity="0.75" prefHeight="450.0" prefWidth="240.0" style="-fx-background-color: #000000;">
          <children>
-            <Button id="btn_ingresar" fx:id="btn_ingresar" layoutX="120.0" layoutY="403.0" mnemonicParsing="false" onAction="#logIn" onKeyPressed="#didreturn" opacity="0.9" prefHeight="33.0" prefWidth="95.0" text="Ingresar">
+            <Button id="btn_ingresar" fx:id="btn_ingresar" layoutX="127.0" layoutY="403.0" mnemonicParsing="false" onAction="#logIn" onKeyPressed="#didreturn" opacity="0.9" prefHeight="33.0" prefWidth="88.0" text="Ingresar">
                <font>
                   <Font name="SansSerif Regular" size="15.0" />
                </font>
@@ -33,6 +33,7 @@
             <PasswordField id="user_password" fx:id="user_password" layoutX="24.0" layoutY="329.0" onKeyPressed="#didpass" onMouseClicked="#passSelected" opacity="0.7" prefHeight="25.0" prefWidth="193.0" />
             <Label id="lab1" alignment="CENTER_RIGHT" layoutX="24.0" layoutY="234.0" prefHeight="17.0" prefWidth="193.0" text="E - mail" textFill="#ff0077" />
             <Label id="lab2" alignment="CENTER_RIGHT" layoutX="24.0" layoutY="305.0" prefHeight="17.0" prefWidth="193.0" text="PassWord" textFill="#ff0077" />
+            <Label id="register" fx:id="register" alignment="CENTER_RIGHT" layoutX="24.0" layoutY="411.0" onMouseClicked="#openRegister" prefHeight="17.0" prefWidth="88.0" text="Registrarme" textFill="#ff0077" />
          </children>
       </Pane>
       <Pane id="log_screen" fx:id="log_screen" prefHeight="450.0" prefWidth="450.0" />

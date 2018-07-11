@@ -19,6 +19,7 @@ import finalconstructor.FinalConstructor;
 import static javafx.application.ConditionalFeature.FXML;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.Separator;
 import javafx.scene.control.TextField;
@@ -49,6 +50,12 @@ public class Ctl_log_in {
     public void close(MouseEvent me) throws Exception
     {
         System.exit(0);
+    }
+    
+    @FXML
+    public void openRegister(MouseEvent ae) throws Exception
+    {
+        new GUILoader("register","Registrarse");
     }
     
     public void nameSelected(MouseEvent ae) throws Exception
