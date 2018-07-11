@@ -3,9 +3,8 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
@@ -13,9 +12,7 @@
    <children>
       <Pane id="log_data_pane" layoutX="450.0" opacity="0.75" prefHeight="450.0" prefWidth="240.0" style="-fx-background-color: #000000;">
          <children>
-            <TextField id="user_name" fx:id="user_name" layoutX="24.0" layoutY="257.0" onKeyPressed="#didname" onMouseClicked="#nameSelected" opacity="1.0" prefHeight="25.0" prefWidth="193.0" />
-            <PasswordField id="user_password" fx:id="user_password" layoutX="24.0" layoutY="322.0" onKeyPressed="#didpass" onMouseClicked="#passSelected" opacity="0.7" prefHeight="25.0" prefWidth="193.0" />
-            <Button id="btn_ingresar" fx:id="btn_ingresar" layoutX="120.0" layoutY="384.0" mnemonicParsing="false" onAction="#logIn" onKeyPressed="#didreturn" opacity="0.9" prefHeight="33.0" prefWidth="95.0" text="Ingresar">
+            <Button id="btn_ingresar" fx:id="btn_ingresar" layoutX="120.0" layoutY="403.0" mnemonicParsing="false" onAction="#logIn" onKeyPressed="#didreturn" opacity="0.9" prefHeight="33.0" prefWidth="95.0" text="Ingresar">
                <font>
                   <Font name="SansSerif Regular" size="15.0" />
                </font>
@@ -29,13 +26,15 @@
                   </Label>
                </children>
             </Pane>
+            <TextField id="user_name" fx:id="user_name" layoutX="24.0" layoutY="258.0" onKeyPressed="#didname" onMouseClicked="#nameSelected" opacity="0.7" prefHeight="25.0" prefWidth="193.0" />
+            <Separator id="name_subline" fx:id="name_subline" layoutX="24.0" layoutY="281.0" maxWidth="193.0" minWidth="0.0" prefHeight="5.0" prefWidth="0.0" style="-fx-background-color: #ff0077;" />
+            <Separator id="pass_subline" fx:id="pass_subline" layoutX="24.0" layoutY="351.0" maxWidth="193.0" minWidth="0.0" prefHeight="5.0" prefWidth="0.0" style="-fx-background-color: #ff0077;" />
+            <Label id="log_error_label" fx:id="log_error_label" layoutX="24.0" layoutY="367.0" prefHeight="17.0" prefWidth="193.0" textFill="#ff0077" />
+            <PasswordField id="user_password" fx:id="user_password" layoutX="24.0" layoutY="329.0" onKeyPressed="#didpass" onMouseClicked="#passSelected" opacity="0.7" prefHeight="25.0" prefWidth="193.0" />
+            <Label id="lab1" alignment="CENTER_RIGHT" layoutX="24.0" layoutY="234.0" prefHeight="17.0" prefWidth="193.0" text="E - mail" textFill="#ff0077" />
+            <Label id="lab2" alignment="CENTER_RIGHT" layoutX="24.0" layoutY="305.0" prefHeight="17.0" prefWidth="193.0" text="PassWord" textFill="#ff0077" />
          </children>
       </Pane>
-      <Pane id="log_screen" fx:id="log_screen" prefHeight="450.0" prefWidth="450.0">
-         <children>
-            <ImageView id="screen" fx:id="screen" fitHeight="450.0" fitWidth="450.0" pickOnBounds="true" preserveRatio="true">
-               
-            </ImageView>
-         </children></Pane>
+      <Pane id="log_screen" fx:id="log_screen" prefHeight="450.0" prefWidth="450.0" />
    </children>
 </Pane>

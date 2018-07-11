@@ -20,6 +20,7 @@ import static javafx.application.ConditionalFeature.FXML;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
+import javafx.scene.control.Separator;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
@@ -69,6 +70,12 @@ public class Ctl_log_in {
             user_name.setOpacity(0.7);
             user_password.setOpacity(1.0);
         }
+        else
+        {
+            sepname = user_name.getText().length()*6 + 15;
+            sepname = sepname== 15? 0:sepname;
+        }
+        name_subline.setPrefWidth(sepname);
     }
     
     public void didpass(KeyEvent ke)
@@ -78,6 +85,12 @@ public class Ctl_log_in {
             user_name.setOpacity(0.7);
             user_password.setOpacity(0.7);
         }
+        else
+        {
+            seppass = user_name.getText().length()*6 + 15;
+            seppass = seppass== 15? 0:seppass;
+        }
+        pass_subline.setPrefWidth(seppass);
     }
     
     public void didreturn(KeyEvent ke)
@@ -89,7 +102,12 @@ public class Ctl_log_in {
         }
     }
     
+    private int sepname = 0,
+                seppass = 0;
+    
     public TextField   user_name;
     public PasswordField user_password;
+    public Separator    name_subline,
+                        pass_subline;
     
 }
