@@ -44,7 +44,8 @@ public class GUILoader extends Application {
     private double xOffset = 0;
     private double yOffset = 0;
 
-    public static Stage antlog,actlog;
+    public static Stage antlog = new Stage(),
+                        actlog;
     
     @Override
     public void start(Stage primaryStage) throws Exception {

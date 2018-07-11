@@ -19,8 +19,37 @@ package finalconstructor;
  *
  * @author RICARDO
  */
-class User implements Debug{
+public class User implements Debug{
+
+    public User(String name, String password) {
+        this.name = name;
+        this.password = password;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
     
+//______________________________________________________________________________    
     
+    public void logIn()
+    {
+        Debug.debugPrintln(name,"\n",password);
+    }
+    
+    private String  name,
+                    password;
     
 }
