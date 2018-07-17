@@ -15,7 +15,9 @@
  */
 package gui;
 
+import java.util.ArrayList;
 import javafx.fxml.FXML;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
 /**
@@ -30,7 +32,36 @@ public class Ctl_register {
     @FXML
     public void close(MouseEvent me) throws Exception
     {
-        new GUILoader("log_in","Registrarse");
+        new GUILoader("log_in","Log");
     }
     
+    public void tfselected(MouseEvent me)
+    {
+        if (started) 
+        {
+            TextField t = (TextField)me.getSource();
+            for (TextField tf : tfs) 
+            {
+                tf.setOpacity((t.equals(tf)? 1.0 : 0.7));
+            }    
+        }
+        else
+        {
+            started = true;
+            tfs.add(user_mail);
+            tfs.add(user_name);
+            tfs.add(user_pass);
+            
+            tfselected(me);
+        }
+        
+    }
+    
+    boolean started = false;
+    
+    TextField   user_mail,
+                user_name,
+                user_pass;
+    
+    ArrayList<TextField> tfs= new ArrayList<>();
 }
