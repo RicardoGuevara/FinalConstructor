@@ -35,11 +35,33 @@ public class Ctl_register {
         new GUILoader("log_in","Log");
     }
     
-    public void tfselected(MouseEvent me)
+    public void regsitrarse()
+    {
+        FinalConstructor.global_user = new finalconstructor.User(user_name.getText(),user_password.getText());
+        FinalConstructor.global_user.singUp();
+    }
+
+    public void mail()
+    {
+        tfselected(user_mail)
+    }
+
+
+    public void name()
+    {
+        tfselected(user_name)
+    }
+
+
+    public void pass()
+    {
+        tfselected(user_pass)
+    }
+
+    public void tfselected(TextField t)
     {
         if (started) 
         {
-            TextField t = (TextField)me.getSource();
             for (TextField tf : tfs) 
             {
                 tf.setOpacity((t.equals(tf)? 1.0 : 0.7));

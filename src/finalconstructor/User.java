@@ -49,6 +49,11 @@ public class User implements Debug{
         Debug.debugPrintln(name,"\n",password);
     }
     
+    public void singUp()
+    {
+        Debug.debugPrintln(name,"\n",password);
+    }
+
     private String  name,
                     password;
     
