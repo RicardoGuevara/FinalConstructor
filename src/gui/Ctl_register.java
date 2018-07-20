@@ -15,7 +15,9 @@
  */
 package gui;
 
+import finalconstructor.FinalConstructor;
 import java.util.ArrayList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -30,32 +32,32 @@ public class Ctl_register {
     {}
     
     @FXML
-    public void close(MouseEvent me) throws Exception
+    public void close(ActionEvent me) throws Exception
     {
         new GUILoader("log_in","Log");
     }
     
-    public void regsitrarse()
+    public void registrarse(ActionEvent ae)
     {
-        FinalConstructor.global_user = new finalconstructor.User(user_name.getText(),user_password.getText());
+        FinalConstructor.global_user = new finalconstructor.User(user_name.getText(),user_pass.getText());
         FinalConstructor.global_user.singUp();
     }
 
     public void mail()
     {
-        tfselected(user_mail)
+        tfselected(user_mail);
     }
 
 
     public void name()
     {
-        tfselected(user_name)
+        tfselected(user_name);
     }
 
 
     public void pass()
     {
-        tfselected(user_pass)
+        tfselected(user_pass);
     }
 
     public void tfselected(TextField t)
@@ -64,26 +66,25 @@ public class Ctl_register {
         {
             for (TextField tf : tfs) 
             {
-                tf.setOpacity((t.equals(tf)? 1.0 : 0.7));
+                tf.setOpacity((t.equals(tf))? 1.0 : 0.7);
             }    
         }
         else
         {
-            started = true;
             tfs.add(user_mail);
             tfs.add(user_name);
             tfs.add(user_pass);
-            
-            tfselected(me);
+            started = true;
+            tfselected(t);
         }
         
     }
     
     boolean started = false;
     
-    TextField   user_mail,
-                user_name,
-                user_pass;
+    public TextField    user_mail,
+                        user_name,
+                        user_pass;
     
     ArrayList<TextField> tfs= new ArrayList<>();
 }
